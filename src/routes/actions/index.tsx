@@ -1,6 +1,6 @@
 import { component$, useStyles$ } from '@builder.io/qwik';
 import { DocumentHead, Form, action$, loader$ } from '@builder.io/qwik-city';
-import styles from './actions.css';
+import styles from './actions.css?inline';
 
 export const toppingsLoader = loader$(() => {
   return ['Pepperoni', 'Sausage', 'Bacon'];
@@ -31,7 +31,7 @@ export const sizeLoader = loader$(() => {
 });
 
 export default component$(() => {
-  // useStyles$(styles);
+  useStyles$(styles);
 
   const crusts = crustLoader.use();
   const sizes = sizeLoader.use();
