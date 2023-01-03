@@ -1,11 +1,12 @@
 import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
+import { DocumentHead, Link } from '@builder.io/qwik-city';
 
 
 
 export default component$(() => {
   return (
     <div>
+      <Link href='/actions'>actions</Link>
     </div>
   );
 });
